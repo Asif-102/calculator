@@ -1,0 +1,30 @@
+.container{
+    width: 50%;
+    margin: auto auto;
+}
+
+.calc-button-row{
+    display: flex;
+}
+
+.button{
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    background: lightblue;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid royalblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: whitesmoke;
+}
+
+.button:active{
+    background: blueviolet;
+}
