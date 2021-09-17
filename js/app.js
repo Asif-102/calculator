@@ -1,5 +1,6 @@
 const calculate = [];
 const calcInput = document.getElementById('typed-numbers');
+const result = document.getElementById('result');
 
 document.getElementById('key-pad').addEventListener('click', function (event) {
     const number = event.target.innerText;
@@ -9,6 +10,7 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         if (number == 'C') {
             calcInput.value = '';
             calculate.length = null;
+            result.innerText = '0';
         }
         else if (number == '<') {
             calcInput.value = calcInput.value.slice(0, -1);
@@ -16,12 +18,13 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         }
         else if (number == '+' || number == '-' || number == '*' || number == '/') {
             if (calculate[calculate.length - 1] != '+' && calculate[calculate.length - 1] != '-' && calculate[calculate.length - 1] != '*' && calculate[calculate.length - 1] != '/') {
-                updateInputAndArray(number)
+                updateInputAndArray(number);
             }
         }
     }
     else {
-        updateInputAndArray(number)
+        updateInputAndArray(number);
+        updateResult();
     }
 })
 
@@ -35,5 +38,9 @@ function updateInputAndArray(number) {
         const newNumber = previousNumber + number;
         calcInput.value = newNumber;
     }
-    
+
+}
+
+function updateResult() {
+
 }
