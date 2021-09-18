@@ -5,7 +5,6 @@ const result = document.getElementById('result');
 document.getElementById('key-pad').addEventListener('click', function (event) {
     const number = event.target.innerText;
 
-
     if (isNaN(number)) {
         if (number == 'C') {
             calcInput.value = '';
@@ -24,7 +23,6 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
     }
     else {
         updateInputAndArray(number);
-        updateResult();
     }
 })
 
@@ -42,5 +40,6 @@ function updateInputAndArray(number) {
 }
 
 function updateResult() {
-
+    const typedKey = calcInput.value;
+    console.log(typedKey);
 }
