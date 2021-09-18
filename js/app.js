@@ -23,6 +23,7 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
     }
     else {
         updateInputAndArray(number);
+        updateResult();
     }
 })
 
@@ -41,5 +42,16 @@ function updateInputAndArray(number) {
 
 function updateResult() {
     const typedKey = calcInput.value;
-    console.log(typedKey);
+    const numAr = []
+    let num  = '';
+    for(let i=0; i< typedKey.length; i++){
+        if(!isNaN(typedKey[i])){
+            num = num + typedKey[i]
+        }else{
+            numAr.push(num);
+            num = '';
+            numAr.push(typedKey[i]);
+        }
+    }
+    console.log(numAr);
 }
