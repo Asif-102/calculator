@@ -11,8 +11,8 @@
 
 <body>
     <div class="container">
-        <input type="text" id="typed-numbers">
-        <p>
+        <p id="typed-numbers"></p>
+        <p class="result">
             Result: <span id="result">0</span>
         </p>
         <div id="key-pad" class="calc-body">
@@ -41,7 +41,7 @@
                 <div class="button">/</div>
             </div>
             <div class="calc-button-row">
-                <div class="equal-btn">=</div>
+                <div class="equal-btn" onclick="updateResult()">=</div>
             </div>
         </div>
     </div>

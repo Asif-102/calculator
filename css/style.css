@@ -49,3 +49,20 @@
 .equal-btn:active{
     background: blueviolet;
 }
+#typed-numbers{
+    font-size: 18px;
+    border: 2px solid darkblue;
+    height: 20px;
+    width: 240px;
+    margin: 5px;
+    background: lightgoldenrodyellow;
+    padding: 4px 5px;
+    border-radius: 5px;
+}
+
+.result{
+    margin: 5px;
+    height: 20px;
+    padding: 5px 8px;
+    font-size: 20px;
+}

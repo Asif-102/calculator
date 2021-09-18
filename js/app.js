@@ -7,12 +7,12 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
 
     if (isNaN(number)) {
         if (number == 'C') {
-            calcInput.value = '';
+            calcInput.innerText = '';
             calculate.length = null;
             result.innerText = '0';
         }
         else if (number == '<') {
-            calcInput.value = calcInput.value.slice(0, -1);
+            calcInput.innerText = calcInput.innerText.slice(0, -1);
             calculate.pop();
         }
         else if (number == '+' || number == '-' || number == '*' || number == '/') {
@@ -23,7 +23,6 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
     }
     else {
         updateInputAndArray(number);
-        updateResult();
     }
 })
 
@@ -33,14 +32,16 @@ function updateInputAndArray(number) {
         calculate.pop();
     }
     else {
-        const previousNumber = calcInput.value;
+        const previousNumber = calcInput.innerText;
         const newNumber = previousNumber + number;
-        calcInput.value = newNumber;
+        calcInput.innerText = newNumber;
     }
 
 }
 
 function updateResult() {
-    const typedKey = calcInput.value;
-    
+    const typedKey = calcInput.innerText;
+    if (typedKey[typedKey.length - 1] != '+' || typedKey[typedKey.length - 1] != '-' || typedKey[typedKey.length - 1] != '*' || typedKey[typedKey.length - 1] != '/') {
+        result.innerText = eval(typedKey);
+    }
 }
