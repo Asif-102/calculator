@@ -28,3 +28,24 @@
 .button:active{
     background: blueviolet;
 }
+
+.equal-btn{
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: burlywood;
+    margin: 5px;
+    border: 3px solid royalblue;
+    border-radius: 10px;
+}
+
+.equal-btn:hover{
+    background: whitesmoke;
+}
+
+.equal-btn:active{
+    background: blueviolet;
+}

@@ -42,16 +42,5 @@ function updateInputAndArray(number) {
 
 function updateResult() {
     const typedKey = calcInput.value;
-    const numAr = []
-    let num  = '';
-    for(let i=0; i< typedKey.length; i++){
-        if(!isNaN(typedKey[i])){
-            num = num + typedKey[i]
-        }else{
-            numAr.push(num);
-            num = '';
-            numAr.push(typedKey[i]);
-        }
-    }
-    console.log(numAr);
+    
 }
