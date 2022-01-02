@@ -41,7 +41,17 @@ function updateInputAndArray(number) {
 
 function updateResult() {
     const typedKey = calcInput.innerText;
+    console.log(typedKey)
     if (typedKey[typedKey.length - 1] != '+' || typedKey[typedKey.length - 1] != '-' || typedKey[typedKey.length - 1] != '*' || typedKey[typedKey.length - 1] != '/') {
-        result.innerText = eval(typedKey);
+
+        if(typedKey === "")
+        {
+            result.innerText = 0;
+        }
+        else
+        {
+            result.innerText = eval(typedKey);
+        }
+        
     }
 }
